@@ -5,15 +5,15 @@ describe(Task) do
   before() do
     Task.clear()
   end
-   
+
   describe("#description") do
-    it("lets you give it a description") do
+    it("lets you read the description out") do
       test_task = Task.new("scrub the zebra")
       expect(test_task.description()).to(eq("scrub the zebra"))
     end
   end
 
-  describe(".all") do
+  describe('.all') do
     it("is empty at first") do
       expect(Task.all()).to(eq([]))
     end

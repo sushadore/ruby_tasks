@@ -1,11 +1,11 @@
 class Task
   @@all_tasks = []
 
-  def initialize(description)
+  define_method(:initialize) do |description|
     @description = description
   end
 
-  def description
+  define_method(:description) do
     @description
   end
 
@@ -13,7 +13,7 @@ class Task
     @@all_tasks
   end
 
-  def save
+  define_method(:save) do
     @@all_tasks.push(self)
   end
 
