@@ -1,5 +1,5 @@
 class Task
-  @@task_list = []
+  @@all_tasks = []
 
   def initialize(description)
     @description = description
@@ -9,11 +9,15 @@ class Task
     @description
   end
 
-  define_singleton_method(:all_tasks) do
-    @@task_list
+  define_singleton_method(:all) do
+    @@all_tasks
   end
 
   def save
-    @@task_list.push(self)
+    @@all_tasks.push(self)
+  end
+
+  define_singleton_method(:clear) do
+    @@all_tasks = []
   end
 end
