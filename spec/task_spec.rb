@@ -8,4 +8,10 @@ describe(Task) do
       expect(test_task.description()).to(eq("scrub the zebra"))
     end
   end
+
+  describe(".all_tasks") do
+    it("is empty at first") do
+      expect(Task.all_tasks()).to(eq([]))
+    end
+  end
 end
